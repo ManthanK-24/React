@@ -28,6 +28,8 @@ import React from 'react';    // for using jsx
 import ReactDOM from 'react-dom';     // helps in rendering 
 
 
+import "./index.css";
+
 ReactDOM.render(<h1>Hi Manthan !!</h1> ,document.getElementById('root'));  // what toshow, where toshow, call-back func
 
 // in where to show we display content of html file, with the help of DOM(Document Object Module) of JS with the help of ID of html tag
@@ -138,4 +140,46 @@ ReactDOM.render(
   </>
   ,
   document.getElementById('root')
+);
+
+
+//  #13  JSX Attributes in react 
+
+// JSX Attributes are similar to HTML attributes eg. global attri like contentEditable
+// 
+
+var img1 = "https://picsum.photos/200/300";
+var img2 = "https://picsum.photos/250/300";
+var img3 = "https://picsum.photos/300/300";
+var links = 'https://www.flipkart.com';
+ReactDOM.render(
+  <>
+  <h1 contentEditable="true"> Hello All {flname} here</h1>
+   <img src= {img1} alt="random_images"/>
+   <img src= {img2} alt="random_images"/>
+   <a href={links} target="_anything">
+   <img src= {img3} alt="random_images"/>
+   </a>
+  </>
+  ,
+   document.getElementById('root')
+);
+
+// #14 CSS styling & importing css file
+
+ //  at the top -> import "./index.css";
+var naam='Manthan';
+ReactDOM.render(
+  <>
+  <h1 className="heading" > Hello All {naam} here</h1>
+  <div className="div_img">
+   <img src= {img1} alt="random_images"/>
+   <img src= {img2} alt="random_images"/>
+   <a href={links} target="_anything">
+   <img src= {img3} alt="random_images"/>
+   </a>
+   </div>
+  </>
+  ,
+   document.getElementById('root')
 );
